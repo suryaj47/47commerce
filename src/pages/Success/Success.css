@@ -1,0 +1,268 @@
+/* ===========================
+   SUCCESS PAGE
+=========================== */
+
+.success-page {
+  min-height: 85vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px;
+
+  background: linear-gradient(135deg, #eef7ff, #f8fff6);
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.processing-card,
+.success-card {
+  width: 100%;
+  max-width: 650px;
+
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 60px 50px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+
+  animation: popup 0.6s ease;
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+.loader {
+  width: 70px;
+
+  height: 70px;
+
+  border-radius: 50%;
+
+  border: 6px solid #e8eef9;
+
+  border-top: 6px solid var(--accent);
+
+  margin: auto;
+
+  animation: spin 0.8s linear infinite;
+}
+
+.processing-card h2 {
+  margin-top: 30px;
+
+  color: var(--primary);
+}
+
+.processing-card p {
+  color: #666;
+
+  margin-top: 15px;
+}
+
+/* ===========================
+   SUCCESS
+=========================== */
+
+.success-icon {
+  width: 110px;
+
+  height: 110px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  color: white;
+
+  font-size: 60px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  animation: bounce 0.8s;
+}
+
+.success-card h1 {
+  margin-top: 30px;
+
+  color: var(--primary);
+
+  font-size: 2.5rem;
+}
+
+.success-card h3 {
+  margin: 18px 0;
+
+  color: #22c55e;
+}
+
+.success-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/* ===========================
+   ORDER INFO
+=========================== */
+
+.order-info {
+  margin: 40px 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.order-info div {
+  background: #f8fafc;
+
+  padding: 20px;
+
+  border-radius: 16px;
+}
+
+.order-info span {
+  display: block;
+
+  color: #777;
+
+  margin-bottom: 8px;
+}
+
+.order-info strong {
+  color: var(--primary);
+}
+
+/* ===========================
+   PROGRESS
+=========================== */
+
+.progress-wrapper {
+  height: 10px;
+
+  background: #e5e7eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+
+  transition: width 1s linear;
+}
+
+.redirect {
+  margin-top: 20px;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.home-btn {
+  display: inline-block;
+
+  margin-top: 35px;
+
+  padding: 15px 34px;
+
+  border-radius: 14px;
+
+  background: var(--accent);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.25);
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.4);
+  }
+
+  70% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  .processing-card,
+  .success-card {
+    padding: 40px 25px;
+  }
+
+  .success-card h1 {
+    font-size: 2rem;
+  }
+
+  .order-info {
+    grid-template-columns: 1fr;
+  }
+}

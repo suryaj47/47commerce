@@ -1,0 +1,188 @@
+/* ===========================
+   PRODUCTS HEADER
+=========================== */
+
+.products-header {
+  max-width: 900px;
+
+  margin: 70px auto 60px;
+
+  text-align: center;
+
+  padding: 0 20px;
+}
+
+.products-header h1 {
+  font-size: 3rem;
+
+  font-family: var(--heading-font);
+
+  color: var(--primary);
+
+  margin-bottom: 18px;
+}
+
+.products-header p {
+  font-size: 1.05rem;
+
+  color: #666;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  background: white;
+
+  padding: 18px 24px;
+
+  border-radius: 60px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #edf2f7;
+
+  transition: 0.35s;
+}
+
+.search-box:hover {
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.12);
+}
+
+.search-box:focus-within {
+  border-color: var(--accent);
+
+  box-shadow: 0 20px 55px rgba(37, 99, 235, 0.2);
+}
+
+.search-box svg {
+  color: #888;
+
+  flex-shrink: 0;
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  font-size: 1rem;
+
+  background: transparent;
+
+  color: #333;
+}
+
+.search-box input::placeholder {
+  color: #999;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .products-header {
+    margin: 50px auto;
+  }
+
+  .products-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .search-box {
+    padding: 16px 18px;
+  }
+}
+
+.products-page {
+  max-width: 1350px;
+
+  margin: auto;
+
+  padding: 60px 40px 100px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.products-header {
+  margin-bottom: 60px;
+}
+
+.breadcrumb {
+  color: #6b7280;
+
+  margin-bottom: 18px;
+
+  font-size: 0.95rem;
+}
+
+.products-header h1 {
+  font-size: 3rem;
+
+  color: var(--primary);
+
+  margin-bottom: 18px;
+
+  font-family: var(--heading-font);
+}
+
+.products-header p {
+  max-width: 650px;
+
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.products-grid-section {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .products-page {
+    padding: 40px 20px 70px;
+  }
+
+  .products-header h1 {
+    font-size: 2.3rem;
+  }
+}
+
+/* ===========================
+   NO PRODUCTS
+=========================== */
+
+.no-products {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.no-products h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.no-products p {
+  color: #777;
+}
