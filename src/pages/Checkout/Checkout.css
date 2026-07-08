@@ -116,6 +116,10 @@
 
   cursor: pointer;
 }
+.checkout-error {
+  font-size: 0.9rem;
+  color: #ff4d4d;
+}
 
 @media (max-width: 900px) {
   .checkout-page {

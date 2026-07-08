@@ -21,19 +21,42 @@ function Checkout() {
     pincode: "",
     payment: "Cash on Delivery",
   });
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+    setErrorMessage("");
   };
 
   const placeOrder = (e) => {
     e.preventDefault();
 
-    clearCart();
+    const requiredFields = [
+      "firstName",
+      "lastName",
+      "phone",
+      "email",
+      "address",
+      "city",
+      "state",
+      "pincode",
+    ];
 
+    const missingFields = requiredFields.filter(
+      (field) => !formData[field].trim(),
+    );
+
+    if (missingFields.length > 0) {
+      setErrorMessage(
+        "Please fill all required fields before placing your order.",
+      );
+      return;
+    }
+
+    clearCart();
     navigate("/success");
   };
 
@@ -47,6 +70,7 @@ function Checkout() {
             type="text"
             placeholder="First Name"
             name="firstName"
+            value={formData.firstName}
             onChange={handleChange}
             required
           />
@@ -55,6 +79,7 @@ function Checkout() {
             type="text"
             placeholder="Last Name"
             name="lastName"
+            value={formData.lastName}
             onChange={handleChange}
             required
           />
@@ -63,6 +88,7 @@ function Checkout() {
             type="tel"
             placeholder="Phone Number"
             name="phone"
+            value={formData.phone}
             onChange={handleChange}
             required
           />
@@ -71,6 +97,7 @@ function Checkout() {
             type="email"
             placeholder="Email"
             name="email"
+            value={formData.email}
             onChange={handleChange}
             required
           />
@@ -80,6 +107,7 @@ function Checkout() {
           placeholder="Address"
           rows="4"
           name="address"
+          value={formData.address}
           onChange={handleChange}
           required
         />
@@ -89,6 +117,7 @@ function Checkout() {
             type="text"
             placeholder="City"
             name="city"
+            value={formData.city}
             onChange={handleChange}
             required
           />
@@ -97,6 +126,7 @@ function Checkout() {
             type="text"
             placeholder="State"
             name="state"
+            value={formData.state}
             onChange={handleChange}
             required
           />
@@ -105,6 +135,7 @@ function Checkout() {
             type="text"
             placeholder="Pincode"
             name="pincode"
+            value={formData.pincode}
             onChange={handleChange}
             required
           />
@@ -118,18 +149,31 @@ function Checkout() {
               type="radio"
               name="payment"
               value="Cash on Delivery"
-              defaultChecked
+              checked={formData.payment === "Cash on Delivery"}
+              onChange={handleChange}
             />
             Cash on Delivery
           </label>
 
           <label>
-            <input type="radio" name="payment" value="Card" />
+            <input
+              type="radio"
+              name="payment"
+              value="Card"
+              checked={formData.payment === "Card"}
+              onChange={handleChange}
+            />
             Credit / Debit Card
           </label>
 
           <label>
-            <input type="radio" name="payment" value="UPI" />
+            <input
+              type="radio"
+              name="payment"
+              value="UPI"
+              checked={formData.payment === "UPI"}
+              onChange={handleChange}
+            />
             UPI
           </label>
         </div>
@@ -159,8 +203,10 @@ function Checkout() {
           <span>Total</span>
           <span>₹{totalPrice.toLocaleString()}</span>
         </div>
-
-        <button onClick={placeOrder}>Place Order</button>
+        {errorMessage && <p className="checkout-error">{errorMessage}</p>}
+        <button type="button" onClick={placeOrder}>
+          Place Order
+        </button>
       </aside>
     </main>
   );
