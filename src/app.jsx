@@ -11,7 +11,7 @@ import Cart from "./pages/Cart/Cart";
 import Checkout from "./pages/Checkout/Checkout";
 import Success from "./pages/Success/Success";
 
-import NotFound from "./pages/NotFound/NotFound";
+import NotFound from "./pages/Notfound/Notfound";
 
 function App() {
   return (
