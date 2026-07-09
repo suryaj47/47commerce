@@ -28,7 +28,7 @@ export const createProduct = ({
   stock,
   specifications,
   images:
-    images && images.length
-      ? [images[0], images[0], images[0]]
+    Array.isArray(images) && images.length
+      ? images.slice(0, 3)
       : [image, image, image],
 });

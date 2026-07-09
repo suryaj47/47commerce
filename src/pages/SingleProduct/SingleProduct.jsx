@@ -24,6 +24,11 @@ function SingleProduct() {
 
   const [quantity, setQuantity] = useState(1);
 
+  useEffect(() => {
+    setSelectedImage(product?.images?.[0] || product?.image);
+    setQuantity(1);
+  }, [product?.id]);
+
   if (!product) {
     return (
       <section className="product-not-found">

@@ -1,8 +1,14 @@
 import { createProduct } from "./productFactory";
 
 import airforce from "../assets/products/fashion/nike-air-force-1.jpg";
+import airforce1 from "../assets/products/fashion/nike-air-force-1-1.jpg";
+import airforce2 from "../assets/products/fashion/nike-air-force-1-2.jpg";
 import samba from "../assets/products/fashion/adidas-samba-og.jpg";
+import samba1 from "../assets/products/fashion/adidas-samba-og-1.jpg";
+import samba2 from "../assets/products/fashion/adidas-samba-og-2.jpg";
 import levis from "../assets/products/fashion/levis-511.jpg";
+import levis1 from "../assets/products/fashion/levis-511-1.jpg";
+import levis2 from "../assets/products/fashion/levis-511-2.jpg";
 
 export const fashionProducts = [
   createProduct({
@@ -20,7 +26,7 @@ export const fashionProducts = [
 
     image: airforce,
 
-    images: [airforce, airforce, airforce],
+    images: [airforce, airforce1, airforce2],
 
     rating: 4.8,
 
@@ -54,7 +60,7 @@ export const fashionProducts = [
 
     image: samba,
 
-    images: [samba, samba, samba],
+    images: [samba, samba1, samba2],
 
     rating: 4.7,
 
@@ -88,7 +94,7 @@ export const fashionProducts = [
 
     image: levis,
 
-    images: [levis, levis, levis],
+    images: [levis, levis1, levis2],
 
     rating: 4.5,
 

@@ -1,8 +1,14 @@
 import { createProduct } from "./productFactory";
 
 import airpods from "../assets/products/electrical/apple-airpods-pro2.jpg";
+import airpods1 from "../assets/products/electrical/apple-airpods-pro2-1.jpg";
+import airpods2 from "../assets/products/electrical/apple-airpods-pro2-2.jpg";
 import galaxy from "../assets/products/electrical/samsung-galaxy-s25-ultra.jpg";
+import galaxy1 from "../assets/products/electrical/samsung-galaxy-s25-ultra-1.jpg";
+import galaxy2 from "../assets/products/electrical/samsung-galaxy-s25-ultra-2.jpg";
 import sony from "../assets/products/electrical/sony-wh1000xm6.jpg";
+import sony1 from "../assets/products/electrical/sony-wh1000xm6-1.jpg";
+import sony2 from "../assets/products/electrical/sony-wh1000xm6-2.jpg";
 
 export const electricalProducts = [
   createProduct({
@@ -20,7 +26,7 @@ export const electricalProducts = [
 
     image: airpods,
 
-    images: [airpods, airpods, airpods],
+    images: [airpods, airpods1, airpods2],
 
     rating: 4.8,
 
@@ -54,7 +60,7 @@ export const electricalProducts = [
 
     image: galaxy,
 
-    images: [galaxy, galaxy, galaxy],
+    images: [galaxy, galaxy1, galaxy2],
 
     rating: 4.7,
 
@@ -88,7 +94,7 @@ export const electricalProducts = [
 
     image: sony,
 
-    images: [sony, sony, sony],
+    images: [sony, sony1, sony2],
 
     rating: 4.6,
 

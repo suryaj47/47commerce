@@ -1,8 +1,14 @@
 import { createProduct } from "./productFactory";
 
 import pax from "../assets/products/wardrobe/ikea-pax.jpg";
+import pax1 from "../assets/products/wardrobe/ikea-pax-1.jpg";
+import pax2 from "../assets/products/wardrobe/ikea-pax-2.jpg";
 import slimline from "../assets/products/wardrobe/godrej-slimline.jpg";
+import slimline1 from "../assets/products/wardrobe/godrej-slimline-1.jpg";
+import slimline2 from "../assets/products/wardrobe/godrej-slimline-2.jpg";
 import freedom from "../assets/products/wardrobe/nilkamal-freedom-plus.jpg";
+import freedom1 from "../assets/products/wardrobe/nilkamal-freedom-plus-1.jpg";
+import freedom2 from "../assets/products/wardrobe/nilkamal-freedom-plus-2.jpg";
 
 export const wardrobeProducts = [
   createProduct({
@@ -20,7 +26,7 @@ export const wardrobeProducts = [
 
     image: pax,
 
-    images: [pax, pax, pax],
+    images: [pax, pax1, pax2],
 
     rating: 4.7,
 
@@ -55,7 +61,7 @@ export const wardrobeProducts = [
 
     image: slimline,
 
-    images: [slimline, slimline, slimline],
+    images: [slimline, slimline1, slimline2],
 
     rating: 4.5,
 
@@ -90,7 +96,7 @@ export const wardrobeProducts = [
 
     image: freedom,
 
-    images: [freedom, freedom, freedom],
+    images: [freedom, freedom1, freedom2],
 
     rating: 4.4,
 
