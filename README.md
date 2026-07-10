@@ -2,7 +2,7 @@
 
 > **47Commerce** is a responsive React-based e-commerce website featuring premium UI, reusable components, persistent shopping cart, and secure Google authentication with Clerk.
 <p>
-<a href="https://suryaj47.github.io/47fume/"><strong>🌐 Live Demo</strong></a> 
+<a href="https://47commerce.vercel.app/"><strong>🌐 Live Demo</strong></a> 
 </p>
 
 ---
